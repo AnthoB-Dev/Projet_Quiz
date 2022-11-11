@@ -1,24 +1,25 @@
 .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem 0;
 }
 
-i {
-    padding: 1rem 1rem;
+ul li {
+   display: flex;
+   gap: 1rem;
 }
 
 .mainQuiz {
     gap: 2rem;
-    overflow-x: hidden;
-    /* height: 100vh; */
+    height: 100%;
 }
 
 /* QUESTION */
 
 .questionContainer {
-    height: 30vh;
+    height: 30%;
 }
 
 #questionTitle {
@@ -26,7 +27,6 @@ i {
 }
 
 #question {
-    max-width: 75%;
     text-align: center;
     font-weight: 700;
     font-size: 1.5rem;
