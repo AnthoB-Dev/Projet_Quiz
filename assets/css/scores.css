@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    margin: 1rem 10px;
+}
+
+/* MAIN */
+
+.container {
+    height: 80vh;
+}
+
+.containerScores {
+    gap: 5vh;
+}
+
+
+.highscores {
+    height: 100%;
+    padding: 1rem 2rem;
+    border: solid 1px;
+    border-radius: 5px;
+    background-color: rgb(95, 37, 189);
+    box-shadow: 0px 5px 10px 2px rgb(161, 102, 255);
+}
+

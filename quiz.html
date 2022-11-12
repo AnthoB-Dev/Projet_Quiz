@@ -10,46 +10,70 @@
     <title>Quiz</title>
 </head>
 <body>
+    <header>
 
+        <nav>
+            <ul class="navbar">
+                <li><a href="/"><i class="fa-solid fa-circle-left"></i>Vers le menu</a></li>
+                <li><a href="scores.html">Voir scores<i class="fa-solid fa-trophy"></i></i></a></li>
+            </ul>
+        </nav>
+
+    </header>
     <main class="mainQuiz f-col f-center"> 
 
+        
 
         <div class="f-col f-center questionContainer">
 
-            <nav class="navbar">
-                <ul>
-                    <li><i class="fa-solid fa-circle-left"></i><a href="index.html">Retourner au menu</a></li>
-                </ul>
-            </nav>
-
-            <h2 id="questionTitle">Question numéro 1 :</h2>
-            <p id="question">Quel est la capitale de la France ?</p>
+            <h1 id="questionTitle">Question numéro 1 :</h1>
+            <h2 id="question">Quel est la capitale de la France ?</h2>
 
         </div>
 
         <div class="f-col f-center choicesContainer">
 
-            <div class="choices">
+            <div class="choices" data-value="1">
+                
+                <div class="choice f-row">
 
-                <a href="quiz.html" data-value="1">Paris</a>
+                    <p>A</p>
+                    <h3 class="js-choice">Paris</h3>
 
-            </div>
-
-            <div class="choices">
-
-                <a href="quiz.html" data-value="2">Bordeaux</a>
-
-            </div>
-
-            <div class="choices">
-
-                <a href="quiz.html" data-value="3">Lyon</a>
+                </div>
 
             </div>
 
-            <div class="choices">
+            <div class="choices" data-value="2">
+                
+                <div class="choice f-row">
 
-                <a href="quiz.html" data-value="4">Marseille</a>
+                    <p>B</p>
+                    <h3 class="js-choice">Bordeaux</h3>
+
+                </div>
+
+            </div>
+
+            <div class="choices" data-value="3">
+                
+                <div class="choice f-row">
+
+                    <p>C</p>
+                    <h3 class="js-choice">Lyon</h3>
+
+                </div>
+
+            </div>
+
+            <div class="choices" data-value="4">
+                
+                <div class="choice f-row">
+
+                    <p>D</p>
+                    <h3 class="js-choice">Marseille</h3>
+
+                </div>
 
             </div>
 
@@ -57,5 +81,6 @@
 
     </main>
     
+<!-- <script src="/assets/fontawesome/js/all.min.js"></script> -->
 </body>
 </html>

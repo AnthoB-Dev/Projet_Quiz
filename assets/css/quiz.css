@@ -1,14 +1,16 @@
+/* 
+=============================================================
+======================      TOP      ========================
+=============================================================
+*/
+
 .navbar {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    margin: 1rem 0;
+    justify-content: space-between;
 }
 
-ul li {
-   display: flex;
-   gap: 1rem;
+i {
+    margin: 1rem 10px;
 }
 
 .mainQuiz {
@@ -16,7 +18,11 @@ ul li {
     height: 100%;
 }
 
-/* QUESTION */
+/* 
+===============================================================
+=====================      QUESTION      ======================
+===============================================================
+*/
 
 .questionContainer {
     height: 30%;
@@ -24,6 +30,7 @@ ul li {
 
 #questionTitle {
     margin: 2rem;
+    font-size: 1.5rem;
 }
 
 #question {
@@ -34,7 +41,11 @@ ul li {
 }
 
 
-/* CHOICES */
+/* 
+==============================================================
+=====================      CHOICES      ======================
+==============================================================
+*/
 
 .choicesContainer {
     gap: 2rem;
@@ -43,33 +54,57 @@ ul li {
 
 .choices {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 1rem;
     width: 100vw;
 }
 
-.choices a {
-    padding: 2rem;
+.choice {
+    margin: auto;
+    align-items: center;
     width: 60%;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-    border: solid 1px;
-    border-radius: 5px;
+    border: solid 2px;
+    border-radius: 2px;
     box-shadow: 0px 3px 10px 2px rgb(0, 0, 0);
+    cursor: pointer;
 }
 
-.choices:first-child a {
-    border-radius: 20px 20px 2px 2px;
+.choice p {
+    padding: 0.9rem 1.1rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    /* border: solid 2px; */
+    /* border-radius: 50%; */
 }
 
-.choices:last-child a {
-    border-radius: 2px 2px 20px 20px;
+.choice p:hover {
+    transform: scale(1.8);
+    transition: all ease-in-out .5s;
 }
 
-.choices a:hover {
+.choice:hover {
     background-color: rgb(95, 37, 189);
     box-shadow: 0px 5px 10px 2px rgb(161, 102, 255);
     transition: all ease-in-out .4s;
+}
+
+.choices:first-child .choice{
+    border-radius: 20px 20px 2px 2px;
+}
+
+.choices:last-child .choice {
+    border-radius: 2px 2px 20px 20px;
+}
+
+
+/* 
+====================================================================
+=====================      MEDIA QUERIES      ======================
+====================================================================
+*/
+
+@media screen and (max-width:768px) {
+    .choice {
+        width: 80%;
+    }
 }
