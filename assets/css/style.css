@@ -55,6 +55,7 @@ body {
 #mainButtons {
     gap: 2rem;
     width: 100%;
+
 }
 
 #sideButtons {
@@ -73,8 +74,24 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
-    border-radius: 10px 30px;
     border: solid 1px;
+    box-shadow: 0px 3px 10px 2px rgb(0, 0, 0);
+}
+
+.btn:first-child a {
+    border-radius: 20px 20px 2px 2px;
+}
+
+.btn:last-child a {
+    border-radius: 2px 2px 20px 20px;
+}
+
+.btnSides:first-child a {
+    border-radius: 20px 2px 2px 20px;
+}
+
+.btnSides:last-child a {
+    border-radius: 2px 20px 20px 2px;
 }
 
 .btn a:hover {
@@ -88,9 +105,26 @@ body {
     .f-center {
         flex-direction: column;
     }
+
+    .btn:first-child a {
+        border-radius: 20px 20px 2px 2px;
+    }
+    
+    .btn:last-child a {
+        border-radius: 2px;
+    }
+    
+    .btnR:first-child a {
+        border-radius: 2px;
+    }
+    
+    .btnR:last-child a {
+        border-radius: 2px 2px 20px 20px;
+    }
+
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:675px) {
 
     #containerMain {
         width: 100%;

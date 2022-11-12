@@ -37,7 +37,7 @@ ul li {
 /* CHOICES */
 
 .choicesContainer {
-    gap: 1rem;
+    gap: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -55,8 +55,17 @@ ul li {
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
-    border-radius: 10px 30px;
     border: solid 1px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px 2px rgb(0, 0, 0);
+}
+
+.choices:first-child a {
+    border-radius: 20px 20px 2px 2px;
+}
+
+.choices:last-child a {
+    border-radius: 2px 2px 20px 20px;
 }
 
 .choices a:hover {
