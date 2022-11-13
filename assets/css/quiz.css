@@ -1,30 +1,24 @@
 /* 
-=============================================================
-======================      TOP      ========================
-=============================================================
+===============================================================
+======================      HEADER      =======================
+===============================================================
 */
 
-header {
+.header {
     width: 100%;
+    height: 10%;
+    font-size: 1.6rem;
+    margin: 0;
 }
 
 .navbar {
-    display: flex;
     justify-content: space-between;
 }
 
 i {
-    margin: 1rem 10px;
+    margin: 1.6rem 1rem;
 }
 
-.mainQuiz {
-    gap: 2rem;
-    height: 100%;
-}
-
-.bodyQuiz {
-    height: 100vh;
-}
 
 /* 
 ===============================================================
@@ -32,20 +26,30 @@ i {
 ===============================================================
 */
 
-.questionContainer {
+.main {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.containerQuiz {
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.containerQuestion {
     height: 30%;
+    width: 100vw;
 }
 
-#questionTitle {
-    margin: 2rem;
-    font-size: 1.5rem;
-}
-
-#question {
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.5rem;
+#js-questionNumber {
+    font-size: 4rem;
     margin: 2rem 0;
+}
+
+#js-question {
+    font-size: 4.5rem;
 }
 
 
@@ -55,52 +59,62 @@ i {
 ==============================================================
 */
 
-.choicesContainer {
-    gap: 2rem;
-    margin-bottom: 1rem;
-}
 
-.choices {
-    display: flex;
+.containerChoices {  
+    padding: 5rem 0;
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem 2rem;
+    grid-auto-flow: row;
+    align-content: center;
     align-items: center;
-    gap: 1rem;
-    width: 100vw;
-}
+    grid-template-areas:
+      "choice1 choice2"
+      "choice3 choice4";
+} 
+  
+.choice1 { grid-area: choice1; }
 
+.choice2 { grid-area: choice2; }
+
+.choice3 { grid-area: choice3; }
+
+.choice4 { grid-area: choice4; }
+
+ 
 .choice {
-    margin: auto;
-    align-items: center;
-    width: 60%;
-    border: solid 2px;
-    border-radius: 2px;
-    box-shadow: 0px 3px 10px 2px rgb(0, 0, 0);
-    cursor: pointer;
-    background-color: var(--clr-secondary);
+    width: 100%;
+    border-radius: 3px;
 }
 
 .choice p {
     padding: 0.9rem 1.1rem;
     margin: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
-.choices:hover p {
+.choice:hover p {
     transform: scale(1.8);
     transition: all ease-in-out .5s;
 }
 
-.choice:hover {
-    background-color: var(--clr-hoverPrimary);
-    box-shadow: 0px 5px 10px 2px var(--clr-hoverSecondary);
-    transition: all ease-in-out .4s;
+.choice:first-child {
+    border-radius: 20px 3px 3px 20px;
 }
 
-.choices:first-child .choice{
-    border-radius: 20px 20px 2px 2px;
+.choice:nth-child(2) {
+    border-radius: 3px 20px 20px 3px;
 }
 
-.choices:last-child .choice {
-    border-radius: 2px 2px 20px 20px;
+.choice:nth-child(3) {
+    border-radius: 20px 3px 3px 20px;
+}
+
+.choice:nth-child(4) {
+    border-radius: 3px 20px 20px 3px;
 }
 
 
@@ -111,29 +125,88 @@ i {
 */
 
 @media screen and (max-width:768px) {
-    .choice {
-        width: 80%;
+    #js-questionNumber {
+        font-size: 3rem;
+    }
+
+    .containerChoices {
+        gap: 1rem 1rem;
     }
 }
 
-@media screen and (max-width:300px) {
-    .mainQuiz {
-        gap: 1rem;
+@media screen and (max-width:610px) {
+
+    #js-questionNumber {
+        font-size: 2.5rem;
+        margin: 1rem;
     }
     
-    #questionTitle {
-        margin: 0 1rem 1rem;
+    #js-question {
+        font-size: 3.5rem;
+    }
+
+
+    .containerChoices {
+        display: flex;
+        flex-wrap: wrap;
     }
     
-    #question {
-        margin: 0;
+    .btn {
+        padding: 1.5rem 0;
     }
 
-    .choice {
-        width: 95%;
+    .choice:first-child {
+        border-radius: 20px 20px 3px 3px;
+    }
+    
+    .choice:nth-child(2) {
+        border-radius: 3px 3px 3px 3px;
+    }
+    
+    .choice:nth-child(3) {
+        border-radius: 3px 3px 3px 3px;
+    }
+    
+    .choice:nth-child(4) {
+        border-radius: 3px 3px 20px 20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #js-questionNumber {
+        font-size: 2rem;
+        margin: 1rem;
+    }
+    
+    #js-question {
+        font-size: 3.5rem;
     }
 
-    .choicesContainer {
-        gap: .5rem;
+    .containerQuiz {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width:335px) {
+    #js-questionNumber {
+        margin: 1rem;
+    }
+    
+    #js-question {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:270px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    #js-questionNumber {
+        margin: 1rem;
+    }
+    
+    #js-question {
+        font-size: 2rem;
     }
 }

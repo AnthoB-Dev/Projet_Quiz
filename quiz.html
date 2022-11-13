@@ -6,83 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/quiz.css">
-    <title>Quiz</title>
+    <title>Home page</title>
 </head>
-<body class="bodyQuiz">
+<body>
 
-    
-    
-    <main class="mainQuiz f-col f-center"> 
+    <div class="container f-center f-col">
 
-        <header>
-
-            <nav>
-                <ul class="navbar">
-                    <li><a href="index.html"><i class="fa-solid fa-circle-left"></i>Vers le menu</a></li>
-                    <li><a href="scores.html">Voir scores<i class="fa-solid fa-trophy"></i></i></a></li>
-                </ul>
-            </nav>
-    
+        <header class="header f-center f-col">
+            <h1>Menu</h1>
         </header>
+        
+        <main>
 
-        <div class="f-col f-center questionContainer">
+            <div class="containerBtns f-col f-center">
 
-            <h1 id="questionTitle">Question numéro 1 :</h1>
-            <h2 id="question">Quel est la capitale de la France ?</h2>
+                <div class="btnTop f-col">
 
-        </div>
-
-        <div class="f-col f-center choicesContainer">
-
-            <div class="choices" data-value="1">
+                    <a href="quiz.html" class="btn">Lancer le Quiz</a>
                 
-                <div class="choice f-row">
+                    <a href="scores.html" class="btn">TOP scores</a>
 
-                    <p>A</p>
-                    <h3 class="js-choice">Paris</h3>
+                </div>
+
+                <div class="btnBottom f-row">
+
+                    <a href="questionCreation.html" class="btn">Créer une Question</a>
+                    
+                    <a href="showQuestions.html" class="btn">Voir les Questions Existante</a>
 
                 </div>
 
             </div>
 
-            <div class="choices" data-value="2">
-                
-                <div class="choice f-row">
-
-                    <p>B</p>
-                    <h3 class="js-choice">Bordeaux</h3>
-
-                </div>
-
-            </div>
-
-            <div class="choices" data-value="3">
-                
-                <div class="choice f-row">
-
-                    <p>C</p>
-                    <h3 class="js-choice">Lyon</h3>
-
-                </div>
-
-            </div>
-
-            <div class="choices" data-value="4">
-                
-                <div class="choice f-row">
-
-                    <p>D</p>
-                    <h3 class="js-choice">Marseille</h3>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </main>
-    
-<!-- <script src="/assets/fontawesome/js/all.min.js"></script> -->
+        </main>
+    </div>
 </body>
 </html>
