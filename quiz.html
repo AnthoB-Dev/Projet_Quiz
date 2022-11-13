@@ -6,39 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Home page</title>
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <title>Quiz</title>
 </head>
 <body>
-
+    
     <div class="container f-center f-col">
 
-        <header class="header f-center f-col">
-            <h1>Menu</h1>
+        <header class="header">
+
+            <nav>
+                <ul class="navbar f-row">
+                    <li><a href="index.html"><i class="fa-solid fa-circle-left"></i>Vers le menu</a></li>
+                    <li><a href="scores.html">Voir scores<i class="fa-solid fa-trophy"></i></a></li>
+                </ul>
+            </nav>
+
         </header>
         
-        <main>
+        <main class="main"> 
 
-            <div class="containerBtns f-col f-center">
+            <div class="containerQuiz f-col f-center">
 
-                <div class="btnTop f-col">
+                <div class="containerQuestion f-col f-center">
 
-                    <a href="quiz.html" class="btn">Lancer le Quiz</a>
-                
-                    <a href="scores.html" class="btn">TOP scores</a>
+                    <h1 id="js-questionNumber">Question 1</h1>
+                    <h2 id="js-question">Quel est la capitale de la France ?</h2>
 
                 </div>
 
-                <div class="btnBottom f-row">
+                <div class="containerChoices f-center">
+                        
+                    <div class="btn choice choice1 f-row">
 
-                    <a href="questionCreation.html" class="btn">Créer une Question</a>
+                        <p>A</p>
+                        <a href="#" data-value="1">Paris</a>
+
+                    </div>
+
+                    <div class="btn choice choice2 f-row" data-value="2">
+
+                        <p>B</p>
+                        <a href="#" class="js-choice">Bordeaux</a>
+
+                    </div>
                     
-                    <a href="showQuestions.html" class="btn">Voir les Questions Existante</a>
+                    <div class="btn choice choice3 f-row" data-value="3">
+
+                        <p>C</p>
+                        <a href="#" class="js-choice">Lyon</a>
+
+                    </div>
+                    
+                    <div class="btn choice choice4 f-row" data-value="4">
+
+                        <p>D</p>
+                        <a href="#" class="js-choice">Marseille</h3>
+
+                    </div>
 
                 </div>
 
             </div>
 
         </main>
+
     </div>
+
+
 </body>
 </html>
