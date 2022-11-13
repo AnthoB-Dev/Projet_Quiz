@@ -19,6 +19,14 @@
     font-family: "roboto-bold";
 }
 
+:root {
+    --clr-primary : rgb(50, 20, 100);
+    --clr-secondary : rgb(50, 20, 115);
+
+    --clr-hoverPrimary : rgb(95, 37, 189);
+    --clr-hoverSecondary : rgb(161, 102, 255);
+}
+
 /* 
 =================================================================
 =====================      CONTAINERS      ======================
@@ -26,7 +34,7 @@
 */
 
 body {
-    background-color: rgb(50, 20, 100);
+    background-color: var(--clr-primary);
 }
 
 .body {
@@ -96,6 +104,7 @@ body {
 .btn {
     display: flex;
     width: 90%;
+    background-color: var(--clr-secondary);
 }
 
 .btn a {
@@ -126,8 +135,8 @@ body {
 }
 
 .btn a:hover {
-    background-color: rgb(95, 37, 189);
-    box-shadow: 0px 5px 10px 2px rgb(161, 102, 255);
+    background-color: var(--clr-hoverPrimary);
+    box-shadow: 0px 5px 10px 2px var(--clr-hoverSecondary);
     transition: all ease-in-out .3s;
 }
 
